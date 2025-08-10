@@ -62,14 +62,28 @@ export class InputManager {
       ) {
         e.preventDefault();
       }
-      this.keys.add(e.key.toLowerCase());
+
+      let normalizedKey = e.key.toLowerCase();
+
+      if (e.key.startsWith("Arrow")) {
+        normalizedKey = e.key.toLowerCase();
+      }
+
+      this.keys.add(normalizedKey);
+
       if (e.key === " " || e.code === "Space") {
         this.dashCallback?.();
       }
     });
 
     window.addEventListener("keyup", (e) => {
-      this.keys.delete(e.key.toLowerCase());
+      let normalizedKey = e.key.toLowerCase();
+
+      if (e.key.startsWith("Arrow")) {
+        normalizedKey = e.key.toLowerCase();
+      }
+
+      this.keys.delete(normalizedKey);
     });
   }
 }
