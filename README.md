@@ -2,8 +2,6 @@
 
 A fast neon arcade game where you dash and dodge. Built with TypeScript + Canvas API for smooth gameplay at 60fps.
 
-![Game Preview](./preview.png)
-
 ## 🚀 Features
 
 - **Dash Mechanics** - Use spacebar to dash through obstacles
